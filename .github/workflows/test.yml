@@ -12,5 +12,5 @@ jobs:
         ./task_test.sh
     - name: Тест удаления файла
       run: |
-        chmod +x test_same.sh
-        ./test_same.sh
+        chmod +x od_test.sh
+        ./od_test.sh
