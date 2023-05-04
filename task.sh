@@ -10,19 +10,11 @@ then
     echo "это не файлы"
     exit 1
 fi
-group1=0
-group2=0
-for students in 'cat $1'
-do
-    group1=$(($group1+1))
-done
 
-for people in `cat $2`
-do
-    group2=$(($group2+1))
-done
+count1=$(cat "$1" | wc -l)
+count2=$(cat "$2" | wc -l)
 
-if [[ $group1 -eq $group2 ]]
+if [[ "$count1" -eq "$count2" ]]
 then
     echo "количество людей совпадает"
     exit 0
